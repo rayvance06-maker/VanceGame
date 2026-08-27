@@ -54,25 +54,26 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_7a7as"]
-radius = 19.104973
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5sy4"]
+size = Vector2(33, 31)
 
 [node name="Enemy" type="Node2D" unique_id=1701602991]
 script = ExtResource("1_qi2p4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=471807996]
-position = Vector2(0.9999962, -12.999996)
-scale = Vector2(0.42777774, 0.34183672)
+position = Vector2(-4.75, -6.374998)
+scale = Vector2(0.3638889, 0.2967687)
 sprite_frames = SubResource("SpriteFrames_di6t8")
 animation = &"attack"
 autoplay = "attack"
-frame_progress = 0.5572978
+frame = 2
+frame_progress = 0.1873047
 
 [node name="Killzone" parent="." unique_id=1605062009 instance=ExtResource("2_qi2p4")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1700899602]
-position = Vector2(5, -37)
-shape = SubResource("CircleShape2D_7a7as")
+position = Vector2(-6, -19)
+shape = SubResource("RectangleShape2D_u5sy4")
 
 [node name="RayCastRight" type="RayCast2D" parent="." unique_id=286257325]
 position = Vector2(6, -37)
